@@ -4,9 +4,27 @@
 
 ### Accounts
 
-  GET /api/v1/accounts/:username
+- Retrive basic information from an user
+
+    GET /api/v1/accounts/:username
 
 Returns the [Account](#Account) of the user with the given username.
+
+### Statuses
+
+- Create a new status (**Authentication required**)
+
+    POST /api/v1/statuses
+
+Upload a new status to the server. Form fields:
+
+| Field         | Description                                      | Optional | Default |
+| ------------- | -------------------------------------------------| -------- | ------- |
+| `public`      | Set is a as a public posts                       | yes      | false   |
+| `message`     | Test displayed next to the photo                 | yes      | empty   |
+| `description` | A description for the media uploaded             | yes      | empty   |
+| `sensitive`   | Set this to mark the media of the status as NSFW | yes      | false   |
+
 
 ## Entities
 
