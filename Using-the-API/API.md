@@ -6,7 +6,7 @@
 
 - Retrive basic information from an user
 
-    GET /api/v1/accounts/:username
+      GET /api/v1/accounts/:username
 
 Returns the [Account](#Account) of the user with the given username.
 
@@ -14,7 +14,7 @@ Returns the [Account](#Account) of the user with the given username.
 
 - Create a new status (**Authentication required**)
 
-    POST /api/v1/statuses
+      POST /api/v1/statuses
 
 Upload a new status to the server. Form fields:
 
@@ -28,7 +28,7 @@ Upload a new status to the server. Form fields:
 
 ## Entities
 
-#Account
+### Account
 
 | Attribute                | Description                                                                        | Nullable |
 | ------------------------ | ---------------------------------------------------------------------------------- | -------- |
