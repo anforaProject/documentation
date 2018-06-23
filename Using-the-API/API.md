@@ -24,7 +24,7 @@ Upload a new status to the server. Form fields:
 | `message`     | Test displayed next to the photo                 | yes      | empty   |
 | `description` | A description for the media uploaded             | yes      | empty   |
 | `sensitive`   | Set this to mark the media of the status as NSFW | yes      | false   |
-
+| `image`       | Image file to be uploaded                        | no       | none    |
 
 ## Entities
 
