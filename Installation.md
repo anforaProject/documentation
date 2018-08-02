@@ -43,7 +43,23 @@ To install them use:
 
 Finally we'll need `pipenv` a python utility to manage installed packages. To install `pipenv` use `pip`:
 
-    pip install --user pipenv
+    sudo pip3 install --user pipenv
+
+If you don't have pipenv command use
+
+    sudo -H pip install -U pipenv
+
+If you get the following error:
+
+    Traceback (most recent call last):
+      File "/usr/bin/pip3", line 9, in <module>
+        from pip import main
+    ImportError: cannot import name 'main'
+
+It's a [known error](https://github.com/pypa/pip/issues/5447)
+
+    sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+
 
 ## Set-up the project
 
@@ -56,7 +72,7 @@ First you need to clone the project. The `stable` branch is master as others bra
 Once you have cloned the repository we need to install the dependencies
 
     cd anfora
-    pipenv install
+    pipenv install --three
 
 This will create a virtual environement to work with python and automaticly it'll install all the packages needed.
 
@@ -73,7 +89,7 @@ The media folder will contain all the media files and the `*_folder` are subfold
 
 Once you have your configuration file ready we need to crate the settings file. 
 
-    pipenv run python src/commands.py -s --config src/config/my_config.yaml.yaml
+    pipenv run python src/commands.py -s --config src/config/my_config.yaml
 
 This will change the configuration file at `src/settings.py`
 
@@ -87,8 +103,9 @@ Now we need to add the web client. For this we will clone as follow
 Now we need to compile the client files. To do this just type
 
     cd client
+    yarn install
     yarn build
 
-This will create a `build` folder that is the one needed by the core to render the html.
+This will create a `dist` folder that is the one needed by the core to render the html.
 
 ## Configuring nginx
