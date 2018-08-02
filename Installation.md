@@ -108,4 +108,93 @@ Now we need to compile the client files. To do this just type
 
 This will create a `dist` folder that is the one needed by the core to render the html.
 
+### Creating the db
+
+We'll need to sync the db. To do this just type
+
+    cd ..
+    pipenv run python commands.py -d
+    
+### Creating a new user
+
+To create a user type
+
+    pipenv run pipenv run python create_user.py
+
+And follow the instructions
+ 
 ## Configuring nginx
+
+Your configuration should be similar to:
+
+
+
+    # the upstream component nginx needs to connect to
+
+    server {
+        server_name www.anfora.test anfora.test;
+        rewrite ^(.*) https://anfora.test$1 permanent;
+    }
+    # configuration of the server
+    server {
+
+        listen	         443;
+        ssl                  on;
+
+        server_name anfora.test;
+
+        ssl_protocols TLSv1.2;
+        ssl_ciphers HIGH:!MEDIUM:!LOW:!aNULL:!NULL:!SHA;
+        ssl_prefer_server_ciphers on;
+        ssl_session_cache shared:SSL:10m;
+
+        ssl_certificate      /etc/ssl/certs/zinat.crt;
+        ssl_certificate_key  /etc/ssl/private/zinat.key;
+
+
+
+        keepalive_timeout    70;
+
+
+        # the domain name it will serve for
+        charset     utf-8;
+        gzip on;
+        gzip_disable "msie6";
+        gzip_vary on;
+        gzip_proxied any;
+        gzip_comp_level 6;
+        gzip_buffers 16 8k;
+        gzip_http_version 1.1;
+        gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+
+        # max upload size
+        client_max_body_size 75M;   # adjust to taste
+
+        # Django media
+        location /media/files  {
+                 alias /home/yabir/killMe/uploads;  # Folder where you save the uploaded media
+        }
+
+
+        location /js {
+                 alias /home/yabir/killMe/anfora/src/client/dist/js;
+        }
+
+        location /css {
+                 alias /home/yabir/killMe/anfora/src/client/dist/css;
+        }
+
+        location / {
+                 proxy_pass http://127.0.0.1:3000;
+        }
+
+    }
+
+Here you should change:
+
+* The `server_name` to match yours.
+* Fix the paths in `alias`.
+* Change the certs in `ssl_certificate`
+
+We recomend [certbot](https://certbot.eff.org/) to manage your certs in production.
