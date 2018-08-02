@@ -88,8 +88,9 @@ Here you should pay attention to the http config and the storage config.
 The media folder will contain all the media files and the `*_folder` are subfolders with different objetives.
 
 Once you have your configuration file ready we need to crate the settings file. 
-
-    pipenv run python src/commands.py -s --config src/config/my_config.yaml
+    
+    cd src
+    pipenv run python commands.py -s --config config/my_config.yaml
 
 This will change the configuration file at `src/settings.py`
 
@@ -97,7 +98,6 @@ This will change the configuration file at `src/settings.py`
 
 Now we need to add the web client. For this we will clone as follow
 
-    cd src
     git clone https://github.com/anforaProject/client.git
 
 Now we need to compile the client files. To do this just type
@@ -119,7 +119,7 @@ We'll need to sync the db. To do this just type
 
 To create a user type
 
-    pipenv run pipenv run python create_user.py
+    pipenv run python create_user.py
 
 And follow the instructions
  
