@@ -110,6 +110,19 @@ This will create a `dist` folder that is the one needed by the core to render th
 
 ### Creating the db
 
+Anfora requires access to a PostgreSQL instance.
+
+Create a user for a PostgreSQL instance:
+
+#### Launch psql as the postgres user
+    sudo -u postgres psql
+
+#### In the following prompt
+    CREATE USER anforaUser CREATEDB;
+    \q
+
+Note that we do not set up a password of any kind, this is because we will be using ident authentication. This allows local users to access the database without a password.
+
 We'll need to sync the db. To do this just type
 
     cd ..
@@ -125,9 +138,15 @@ And follow the instructions
  
 ## Configuring nginx
 
+We need nginx to manage our conections with the world. 
+Type `cd /etc/nginx/sites-available` and then `nano anfora.conf` (you can use your favorite editor).
+
 Your configuration should be similar to:
 
-
+    map $http_upgrade $connection_upgrade {
+      default upgrade;
+      ''      close;
+    }
 
     # the upstream component nginx needs to connect to
 
@@ -173,17 +192,30 @@ Your configuration should be similar to:
 
         # Django media
         location /media/files  {
-                 alias /home/yabir/killMe/uploads;  # Folder where you save the uploaded media
+                 alias /home/anforaUser/uploads;  # Folder where you save the uploaded media
         }
 
 
         location /js {
-                 alias /home/yabir/killMe/anfora/src/client/dist/js;
+                 alias /home/anforaUser/anfora/src/client/dist/js;
         }
 
         location /css {
-                 alias /home/yabir/killMe/anfora/src/client/dist/css;
+                 alias /home/anforaUser/anfora/src/client/dist/css;
         }
+        
+        location /api/v1/streaming/ {
+    	         proxy_pass http://127.0.0.1:4000;
+                 proxy_buffering off;
+                 proxy_redirect off;
+                 proxy_http_version 1.1;
+                 proxy_set_header Upgrade $http_upgrade;
+                 proxy_set_header Connection $connection_upgrade;
+                 tcp_nodelay on;
+
+
+        }
+
 
         location / {
                  proxy_pass http://127.0.0.1:3000;
@@ -198,3 +230,23 @@ Here you should change:
 * Change the certs in `ssl_certificate`
 
 We recomend [certbot](https://certbot.eff.org/) to manage your certs in production.
+
+Save the changes and use
+
+    ln -s ../sites-available/anfora.conf
+    
+to create a symbolic link to the config file so nginx can read it.
+Finally restart nginx using `sudo nginx -s reload`.
+
+## Starting services
+
+The process that you need to start are:
+
+* redis-server
+* anfora server
+* anfora node server
+* huey consumer (tasks manager)
+
+To continue I'll assume that you have an user called `anforaUser` and that the root of the project is at `home/anforaUser/anfora/`
+
+WIP commands are available at [the project page](https://github.com/anforaProject/anfora#start-services)
