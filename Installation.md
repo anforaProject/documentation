@@ -113,13 +113,16 @@ This will create a `dist` folder that is the one needed by the core to render th
 Anfora requires access to a PostgreSQL instance.
 
 Create a user for a PostgreSQL instance:
+    
+    su - postgres
+    createuser -U postgres -s YOURUSERNAME
+    exit
 
-#### Launch psql as the postgres user
-    sudo -u postgres psql
+Now edit `/etc/postgresql/10/main/pg_hba.conf` so
 
-#### In the following prompt
-    CREATE USER anforaUser CREATEDB;
-    \q
+    host    all             all             127.0.0.1/32            trust
+
+We have changed `md5` to `trust` in the last column.
 
 Note that we do not set up a password of any kind, this is because we will be using ident authentication. This allows local users to access the database without a password.
 
