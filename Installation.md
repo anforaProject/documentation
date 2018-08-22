@@ -43,11 +43,11 @@ To install them use:
 
 Finally we'll need `pipenv` a python utility to manage installed packages. To install `pipenv` use `pip`:
 
-    sudo pip3 install --user pipenv
+    pip3 install --user pipenv
 
 If you don't have pipenv command use
 
-    sudo -H pip install -U pipenv
+    pip install -U pipenv
 
 If you get the following error:
 
