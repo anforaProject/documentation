@@ -72,7 +72,7 @@ First you need to clone the project. The `stable` branch is master as others bra
 Once you have cloned the repository we need to install the dependencies
 
     cd anfora
-    pipenv install --three
+    pipenv install --python python3.6
 
 This will create a virtual environement to work with python and automaticly it'll install all the packages needed.
 
