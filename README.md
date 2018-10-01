@@ -1,2 +1,2 @@
 # documentation
-Documentation for the zinat project
+Documentation for the anfora project
