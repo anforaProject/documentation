@@ -110,7 +110,7 @@
               
                 <h1 id="js-client-api">JS Client API</h1>
 <h2 id="creating-content">Creating content</h2>
-<h3 id="uploadstatusdata-object-token-string">uploadStatus(data: Object, token: String)</h3>
+<h4 id="uploadstatusdata-object-token-string">uploadStatus(data: Object, token: String)</h4>
 <p>Create a new status using the data provided. The provided data can include</p>
 <ul>
 <li><code>public</code> (boolean) : Whether the new status should be public or
@@ -122,7 +122,7 @@ images. Basically a NSFW alert.</li>
 </ul>
 <p><code>token</code> is the string containing the user token.</p>
 <p>Returns an axios promise</p>
-<h3 id="uploadcommentdata-object-token-string">uploadComment(data: Object, token: String)</h3>
+<h4 id="uploadcommentdata-object-token-string">uploadComment(data: Object, token: String)</h4>
 <p>Create a new comment. The data provided may include:</p>
 <ul>
 <li><code>public</code> (boolean): Whether the comment is public or not.</li>
@@ -132,7 +132,7 @@ images. Basically a NSFW alert.</li>
 <li><code>in_reply_to_id</code> (string): Mandatory. The id of the status we are commenting.</li>
 </ul>
 <p><code>token</code> is the string containing the user token.</p>
-<h3 id="uploadmediadata-object-token-string">uploadMedia(data: Object, token: String)</h3>
+<h4 id="uploadmediadata-object-token-string">uploadMedia(data: Object, token: String)</h4>
 <p>Create a media object on the server. Data includes:</p>
 <ul>
 <li><code>file</code> (blob): Mandatory. The image file.</li>
@@ -140,28 +140,28 @@ images. Basically a NSFW alert.</li>
 </ul>
 <p><code>token</code> is the string containing the user token.</p>
 <h2 id="retrive-data">Retrive Data</h2>
-<h3 id="retriveimagesid-string">retriveImages(id: String)</h3>
+<h4 id="retriveimagesid-string">retriveImages(id: String)</h4>
 <p>Retrive all the statuses for a given user. <code>id</code> is the identifier for the user.</p>
-<h3 id="retrivestatusid-string">retriveStatus(id: String)</h3>
+<h4 id="retrivestatusid-string">retriveStatus(id: String)</h4>
 <p>Retrive the status with the given id.</p>
-<h3 id="retriveuserid-string">retriveUser(id: String)</h3>
+<h4 id="retriveuserid-string">retriveUser(id: String)</h4>
 <p>Retrive the profile info for the user with the given <code>id</code>.</p>
-<h3 id="getfollowersid-string">getFollowers(id: String)</h3>
+<h4 id="getfollowersid-string">getFollowers(id: String)</h4>
 <p>Retrive a list of user's profiles follwing the user with the given <code>id</code>.</p>
-<h3 id="getfollowingid-string">getFollowing(id: String)</h3>
+<h4 id="getfollowingid-string">getFollowing(id: String)</h4>
 <p>Retrive a list of user's profiles that the user with the given <code>id</code> is following.</p>
 <h2 id="actions">Actions</h2>
-<h3 id="removestatusid-string-token-string">removeStatus(id: String, token: String)</h3>
+<h4 id="removestatusid-string-token-string">removeStatus(id: String, token: String)</h4>
 <p>Remove the status with the <code>id</code> given. <code>token</code> must be the owner's token.</p>
 <h3 id="likestatusid-string-token-string">likeStatus(id: String, token: String)</h3>
 <p>Like the status with the given <code>id</code> with the <code>token</code> credentials of the current user.</p>
-<h3 id="dislikestatusid-string-token-string">dislikeStatus(id: String, token: String)</h3>
+<h4 id="dislikestatusid-string-token-string">dislikeStatus(id: String, token: String)</h4>
 <p>Undo a like action over the status with the given <code>id</code> </p>
-<h3 id="verifycredentialstoken-string">verifyCredentials(token: String)</h3>
+<h4 id="verifycredentialstoken-string">verifyCredentials(token: String)</h4>
 <p>Verify that the current user matches the correct profile. 
 This is used to to check if the token is still valid.</p>
 <h2 id="accounts">Accounts</h2>
-<h3 id="passwordresetdata-object">passwordReset(data: Object)</h3>
+<h4 id="passwordresetdata-object">passwordReset(data: Object)</h4>
 <p>Change password for the current user. Data is an object with the following attributes:</p>
 <ul>
 <li><code>password</code> (string): The new password</li>
