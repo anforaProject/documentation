@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>JS Client API - My Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "JS Client API";
+    var mkdocs_page_input_path = "client.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> My Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Welcome to Anfora</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">JS Client API</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#js-client-api">JS Client API</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#creating-content">Creating content</a></li>
+        
+            <li><a class="toctree-l3" href="#retrive-data">Retrive Data</a></li>
+        
+            <li><a class="toctree-l3" href="#actions">Actions</a></li>
+        
+            <li><a class="toctree-l3" href="#accounts">Accounts</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">My Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>JS Client API</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="js-client-api">JS Client API</h1>
+<h2 id="creating-content">Creating content</h2>
+<h3 id="uploadstatusdata-object-token-string">uploadStatus(data: Object, token: String)</h3>
+<p>Create a new status using the data provided. The provided data can include</p>
+<ul>
+<li><code>public</code> (boolean) : Whether the new status should be public or
+not.</li>
+<li><code>status</code> (string): The caption for the status</li>
+<li><code>sensitive</code> (boolean): Whether the status contains sensitive
+images. Basically a NSFW alert.</li>
+<li><code>media_ids</code> (string): A list of media files represented by their id to add to the status.</li>
+</ul>
+<p><code>token</code> is the string containing the user token.</p>
+<p>Returns an axios promise</p>
+<h3 id="uploadcommentdata-object-token-string">uploadComment(data: Object, token: String)</h3>
+<p>Create a new comment. The data provided may include:</p>
+<ul>
+<li><code>public</code> (boolean): Whether the comment is public or not.</li>
+<li><code>status</code> (string): Actual message for the comment.</li>
+<li><code>sensitive</code> (boolean): Whether the message includes some dangerous content.</li>
+<li><code>spoiler_text</code> (string): A spoiler text to use when sensitive is true.</li>
+<li><code>in_reply_to_id</code> (string): Mandatory. The id of the status we are commenting.</li>
+</ul>
+<p><code>token</code> is the string containing the user token.</p>
+<h3 id="uploadmediadata-object-token-string">uploadMedia(data: Object, token: String)</h3>
+<p>Create a media object on the server. Data includes:</p>
+<ul>
+<li><code>file</code> (blob): Mandatory. The image file.</li>
+<li><code>description</code> (string): A description for the media.</li>
+</ul>
+<p><code>token</code> is the string containing the user token.</p>
+<h2 id="retrive-data">Retrive Data</h2>
+<h3 id="retriveimagesid-string">retriveImages(id: String)</h3>
+<p>Retrive all the statuses for a given user. <code>id</code> is the identifier for the user.</p>
+<h3 id="retrivestatusid-string">retriveStatus(id: String)</h3>
+<p>Retrive the status with the given id.</p>
+<h3 id="retriveuserid-string">retriveUser(id: String)</h3>
+<p>Retrive the profile info for the user with the given <code>id</code>.</p>
+<h3 id="getfollowersid-string">getFollowers(id: String)</h3>
+<p>Retrive a list of user's profiles follwing the user with the given <code>id</code>.</p>
+<h3 id="getfollowingid-string">getFollowing(id: String)</h3>
+<p>Retrive a list of user's profiles that the user with the given <code>id</code> is following.</p>
+<h2 id="actions">Actions</h2>
+<h3 id="removestatusid-string-token-string">removeStatus(id: String, token: String)</h3>
+<p>Remove the status with the <code>id</code> given. <code>token</code> must be the owner's token.</p>
+<h3 id="likestatusid-string-token-string">likeStatus(id: String, token: String)</h3>
+<p>Like the status with the given <code>id</code> with the <code>token</code> credentials of the current user.</p>
+<h3 id="dislikestatusid-string-token-string">dislikeStatus(id: String, token: String)</h3>
+<p>Undo a like action over the status with the given <code>id</code> </p>
+<h3 id="verifycredentialstoken-string">verifyCredentials(token: String)</h3>
+<p>Verify that the current user matches the correct profile. 
+This is used to to check if the token is still valid.</p>
+<h2 id="accounts">Accounts</h2>
+<h3 id="passwordresetdata-object">passwordReset(data: Object)</h3>
+<p>Change password for the current user. Data is an object with the following attributes:</p>
+<ul>
+<li><code>password</code> (string): The new password</li>
+<li><code>password_confirmation</code> (string): A confirmation for the password</li>
+<li><code>token</code> (string): The token to auth the user</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href=".." class="btn btn-neutral" title="Welcome to Anfora"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
