@@ -1,2 +1,3 @@
 site_name: My Docs
-theme: readthedocs
+theme:
+        name: 'material'
