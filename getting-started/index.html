@@ -1,0 +1,788 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.6">
+    
+    
+      
+        <title>Installation - Anfora Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#installation-guide-wip" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Anfora Docs" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Anfora Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Installation
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Anfora Docs" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Anfora Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Installation
+      </label>
+    
+    <a href="./" title="Installation" class="md-nav__link md-nav__link--active">
+      Installation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-prerequisites" title="0. Prerequisites" class="md-nav__link">
+    0. Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-setting-up-the-environement" title="1. Setting up the environement" class="md-nav__link">
+    1. Setting up the environement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#other-dependencies" title="Other dependencies" class="md-nav__link">
+    Other dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-the-project" title="Set-up the project" class="md-nav__link">
+    Set-up the project
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-core" title="Installing the core" class="md-nav__link">
+    Installing the core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-settings-file" title="Creating a settings file" class="md-nav__link">
+    Creating a settings file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-web-client" title="Installing the web client" class="md-nav__link">
+    Installing the web client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-db" title="Creating the db" class="md-nav__link">
+    Creating the db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-user" title="Creating a new user" class="md-nav__link">
+    Creating a new user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-nginx" title="Configuring nginx" class="md-nav__link">
+    Configuring nginx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services" title="Starting services" class="md-nav__link">
+    Starting services
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../development/" title="Development" class="md-nav__link">
+      Development
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      API
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../client/" title="Client API" class="md-nav__link">
+      Client API
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-prerequisites" title="0. Prerequisites" class="md-nav__link">
+    0. Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-setting-up-the-environement" title="1. Setting up the environement" class="md-nav__link">
+    1. Setting up the environement
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#other-dependencies" title="Other dependencies" class="md-nav__link">
+    Other dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-the-project" title="Set-up the project" class="md-nav__link">
+    Set-up the project
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-core" title="Installing the core" class="md-nav__link">
+    Installing the core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-settings-file" title="Creating a settings file" class="md-nav__link">
+    Creating a settings file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-the-web-client" title="Installing the web client" class="md-nav__link">
+    Installing the web client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-db" title="Creating the db" class="md-nav__link">
+    Creating the db
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-user" title="Creating a new user" class="md-nav__link">
+    Creating a new user
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-nginx" title="Configuring nginx" class="md-nav__link">
+    Configuring nginx
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starting-services" title="Starting services" class="md-nav__link">
+    Starting services
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="installation-guide-wip">Installation guide - WIP</h1>
+<h2 id="0-prerequisites">0. Prerequisites</h2>
+<p>We will using: </p>
+<ul>
+<li>A Ubuntu based distro</li>
+<li>Root access on the machine</li>
+<li>A domain</li>
+<li>Python 3.6</li>
+<li>nginx (you can use apache too)</li>
+</ul>
+<h2 id="1-setting-up-the-environement">1. Setting up the environement</h2>
+<p>Update your package list and system:</p>
+<pre><code>sudo apt update
+sudo apt upgrade
+</code></pre>
+<p>Older dristribution of ubuntu don't include python3.6 and we'll need it. 
+Depending on your OS version you may need to install it.</p>
+<p>Install the dev packages and necessary things for python to compile packages.</p>
+<pre><code>sudo apt install build-essential libssl-dev libffi-dev python3-dev
+</code></pre>
+<p>You'll need git and yarn to download and install dependencies.</p>
+<pre><code>sudo apt install git
+</code></pre>
+<p>To install yarn please read the instructions at their <a href="https://yarnpkg.com/lang/en/docs/install/#debian-stable">official webpage</a></p>
+<h3 id="other-dependencies">Other dependencies</h3>
+<ul>
+<li><code>redis-*</code> - Used to queue tasks and as in-memory data store structure</li>
+<li><code>imagemagick</code> - Image related operations</li>
+<li><code>ffmpeg</code> - Conversion of videos to mp4</li>
+<li><code>nodejs</code> - Used for the streaming API</li>
+</ul>
+<p>To install them use:</p>
+<pre><code>sudo apt install imagemagick ffmpeg nginx redis-server redis-tools postgresql postgresql-contrib python3-pip
+</code></pre>
+<p>Finally we'll need <code>pipenv</code> a python utility to manage installed packages. To install <code>pipenv</code> use <code>pip</code>:</p>
+<pre><code>sudo pip3 install --user pipenv
+</code></pre>
+<p>If you don't have pipenv command use</p>
+<pre><code>sudo pip install -U pipenv
+</code></pre>
+<p>If you get the following error:</p>
+<pre><code>Traceback (most recent call last):
+  File "/usr/bin/pip3", line 9, in &lt;module&gt;
+    from pip import main
+ImportError: cannot import name 'main'
+</code></pre>
+<p>It's a <a href="https://github.com/pypa/pip/issues/5447">known error</a></p>
+<pre><code>sudo python3 -m pip uninstall pip &amp;&amp; sudo apt install python3-pip --reinstall
+</code></pre>
+<h2 id="set-up-the-project">Set-up the project</h2>
+<h3 id="installing-the-core">Installing the core</h3>
+<p>First you need to clone the project. The <code>stable</code> branch is master as others branchs contains changes that may break the instance.</p>
+<pre><code>git clone https://github.com/anforaProject/anfora.git
+</code></pre>
+<p>Once you have cloned the repository we need to install the dependencies</p>
+<pre><code>cd anfora
+pipenv install --python python3.6
+</code></pre>
+<p>This will create a virtual environement to work with python and automaticly it'll install all the packages needed.</p>
+<h3 id="creating-a-settings-file">Creating a settings file</h3>
+<p>Now we need to create the settings file (<code>An script to make easier this process will be included in future releases</code>). To do this we need to create a <code>.yaml</code> file with the necessary configuration:</p>
+<p>Inside the folder <code>src/config</code> you have two examples of configurations. You can create a new copy and just override the values.</p>
+<pre><code>cp src/config/dev.yaml src/config/my_config.yaml
+</code></pre>
+<p>Here you should pay attention to the http config and the storage config.
+The media folder will contain all the media files and the <code>*_folder</code> are subfolders with different objetives.</p>
+<p>Once you have your configuration file ready we need to crate the settings file. </p>
+<pre><code>cd src
+pipenv run python commands.py -s --config config/my_config.yaml
+</code></pre>
+<p>This will change the configuration file at <code>src/settings.py</code></p>
+<h3 id="installing-the-web-client">Installing the web client</h3>
+<p>Now we need to add the web client. For this we will clone as follow</p>
+<pre><code>git clone https://github.com/anforaProject/client.git
+</code></pre>
+<p>Now we need to compile the client files. To do this just type</p>
+<pre><code>cd client
+yarn install
+yarn build
+</code></pre>
+<p>This will create a <code>dist</code> folder that is the one needed by the core to render the html.</p>
+<h3 id="creating-the-db">Creating the db</h3>
+<p>Anfora requires access to a PostgreSQL instance.</p>
+<p>Create a user for a PostgreSQL instance:</p>
+<pre><code>su - postgres
+createuser -U postgres -s YOURUSERNAME
+exit
+</code></pre>
+<p>Now edit <code>/etc/postgresql/10/main/pg_hba.conf</code> so</p>
+<pre><code>host    all             all             127.0.0.1/32            trust
+</code></pre>
+<p>We have changed <code>md5</code> to <code>trust</code> in the last column.</p>
+<p>Note that we do not set up a password of any kind, this is because we will be using ident authentication. This allows local users to access the database without a password.</p>
+<p>We'll need to sync the db. To do this just type</p>
+<pre><code>cd ..
+pipenv run python commands.py -d
+</code></pre>
+<h3 id="creating-a-new-user">Creating a new user</h3>
+<p>To create a user type</p>
+<pre><code>pipenv run python create_user.py
+</code></pre>
+<p>And follow the instructions</p>
+<h2 id="configuring-nginx">Configuring nginx</h2>
+<p>We need nginx to manage our conections with the world. 
+Type <code>cd /etc/nginx/sites-available</code> and then <code>nano anfora.conf</code> (you can use your favorite editor).</p>
+<p>Your configuration should be similar to:</p>
+<pre><code>map $http_upgrade $connection_upgrade {
+  default upgrade;
+  ''      close;
+}
+
+# the upstream component nginx needs to connect to
+
+server {
+    server_name www.anfora.test anfora.test;
+    rewrite ^(.*) https://anfora.test$1 permanent;
+}
+# configuration of the server
+server {
+
+    listen           443;
+    ssl                  on;
+
+    server_name anfora.test;
+
+    ssl_protocols TLSv1.2;
+    ssl_ciphers HIGH:!MEDIUM:!LOW:!aNULL:!NULL:!SHA;
+    ssl_prefer_server_ciphers on;
+    ssl_session_cache shared:SSL:10m;
+
+    ssl_certificate      /etc/ssl/certs/zinat.crt;
+    ssl_certificate_key  /etc/ssl/private/zinat.key;
+
+
+
+    keepalive_timeout    70;
+
+
+    # the domain name it will serve for
+    charset     utf-8;
+    gzip on;
+    gzip_disable "msie6";
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+
+    # max upload size
+    client_max_body_size 75M;   # adjust to taste
+
+    # Django media
+    location /media/files  {
+             alias /home/anforaUser/uploads;  # Folder where you save the uploaded media
+    }
+
+
+    location /js {
+             alias /home/anforaUser/anfora/src/client/dist/js;
+    }
+
+    location /css {
+             alias /home/anforaUser/anfora/src/client/dist/css;
+    }
+
+    location /api/v1/streaming/ {
+             proxy_pass http://127.0.0.1:4000;
+             proxy_buffering off;
+             proxy_redirect off;
+             proxy_http_version 1.1;
+             proxy_set_header Upgrade $http_upgrade;
+             proxy_set_header Connection $connection_upgrade;
+             tcp_nodelay on;
+
+
+    }
+
+
+    location / {
+             proxy_pass http://127.0.0.1:3000;
+    }
+
+}
+</code></pre>
+<p>Here you should change:</p>
+<ul>
+<li>The <code>server_name</code> to match yours.</li>
+<li>Fix the paths in <code>alias</code>.</li>
+<li>Change the certs in <code>ssl_certificate</code></li>
+</ul>
+<p>We recomend <a href="https://certbot.eff.org/">certbot</a> to manage your certs in production.</p>
+<p>Save the changes and use</p>
+<pre><code>ln -s ../sites-available/anfora.conf
+</code></pre>
+<p>to create a symbolic link to the config file so nginx can read it.
+Finally restart nginx using <code>sudo nginx -s reload</code>.</p>
+<h2 id="starting-services">Starting services</h2>
+<p>The process that you need to start are:</p>
+<ul>
+<li>redis-server</li>
+<li>anfora server</li>
+<li>anfora node server</li>
+<li>huey consumer (tasks manager)</li>
+</ul>
+<p>To continue I'll assume that you have an user called <code>anforaUser</code> and that the root of the project is at <code>home/anforaUser/anfora/</code></p>
+<p><strong>WIP</strong></p>
+<ol>
+<li>
+<p>Start the redis server using</p>
+<pre><code>redis-server
+</code></pre>
+</li>
+<li>
+<p>Start <em>huey</em> running:</p>
+<pre><code>cd src &amp;&amp; pipenv run huey_consumer.py tasks.main.huey -m 1 -w 4
+</code></pre>
+</li>
+<li>
+<p>Start the server with</p>
+<pre><code>cd src &amp;&amp; pipenv run python main.py
+</code></pre>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href=".." title="About" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                About
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../development/" title="Development" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Development
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.5e60981f.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
