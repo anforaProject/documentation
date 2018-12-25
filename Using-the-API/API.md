@@ -12,6 +12,8 @@ Returns the [Account](#Account) of the user with the given username.
 
 ### Statuses
 
+            Working on this. Outdate info
+
 - Create a new status (**Authentication required**)
 
       POST /api/v1/statuses
@@ -21,8 +23,7 @@ Upload a new status to the server. Form fields:
 | Field         | Description                                      | Optional | Default |
 | ------------- | -------------------------------------------------| -------- | ------- |
 | `public`      | Set is a as a public posts                       | yes      | false   |
-| `message`     | Test displayed next to the photo                 | yes      | empty   |
-| `description` | A description for the media uploaded             | yes      | empty   |
+| `caption`     | Message attached to the status                   | yes      | empty   |
 | `sensitive`   | Set this to mark the media of the status as NSFW | yes      | false   |
 | `image`       | Image file to be uploaded                        | no       | none    |
 
@@ -47,3 +48,13 @@ Upload a new status to the server. Form fields:
 | `moved`                  | If the owner decided to switch accounts, new account is in this attribute          | yes      |
 | `fields`                 | Array of profile metadata field, each element has 'name' and 'value'               | yes      |
 | `bot`                    | Boolean to indicate that the account performs automated actions                    | no       |
+
+
+### Status
+
+| Attribute                | Description                                                  | Default   | Type        | Nullable |
+| `id`                     | The ID of the status                                         | -         | Integer     | no       |
+| `public`                 | Wheter the status has public visibility or not               | True      | Boolean     | no       |
+| `sensitive`              | If `true` the status may contain nsfw media                  | False     | Boolean     | no       |
+| `in_reply_to`            | If it's a reply it stores the AP id of the one replying to   | Null      | Char        | true     |
+             

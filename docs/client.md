@@ -66,7 +66,7 @@ Retrive a list of user's profiles that the user with the given `id` is following
 
 Remove the status with the `id` given. `token` must be the owner's token.
 
-### likeStatus(id: String, token: String)
+#### likeStatus(id: String, token: String)
 
 Like the status with the given `id` with the `token` credentials of the current user.
 

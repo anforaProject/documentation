@@ -1,3 +1,10 @@
-site_name: My Docs
+site_name: Anfora Docs
 theme:
         name: 'material'
+
+nav:
+    - About: index.md
+    - Installation: getting-started.md
+    - Development: development.md
+    - API:
+        - Client API: client.md
