@@ -16,7 +16,7 @@ The client uses _Vue.js_ as framework and _yarn_ as package manager. To develop 
 The base url of the server is defined in the `.env` file under the name `VUE_APP_CLIENT_DOMAIN`.
 By default it points to `https://anfora.social`. While this instance is up you can use the API of this server.
 
-4. To run the development server you can run
+4. To run the development server you can type
 
         yarn serve
 
