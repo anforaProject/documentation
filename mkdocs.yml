@@ -7,4 +7,7 @@ nav:
     - Installation: getting-started.md
     - Development: development.md
     - API:
+        - Entities: entities.md
+        - Rest API: 
+            - Media: rest/media.md
         - Client API: client.md
